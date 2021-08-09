@@ -1,0 +1,11 @@
+#body{
+    font-family: sans-serif;
+    background-color: grey;
+    list-style: circle;
+    background-image:url("todo.jpg") ;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    background-color:transparent;
+
+}
