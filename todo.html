@@ -5,46 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
-    <style>
-        body {
-            background: grey;
-            height: 100px;
-            width: 200px;
-            margin: 0 auto;
-            color: white;
-            font-size: x-large;
-            
-        }
-    </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', function(){
-            document.querySelector('#submit').disabled = true;
-            document.querySelector('#task').onkeyup = ()=> {
-                if(document.querySelector('#task').value.length > 0){
-                    document.querySelector('#submit').disabled = false;
-                }
-                else{
-                    document.querySelector('#submit').disabled = true;
-                }
-            }
-
-            document.querySelector('form').onsubmit = () => {
-                
-               const task = document.querySelector('#task').value;
-               const li = document.createElement('li');
-               li.innerHTML = task;
-               document.querySelector('#tasks').append(li);
-               document.querySelector('#task').value = '';
-               document.querySelector('#submit').disabled = true;
-               return false;
-            }
-        });
+    <link rel="stylesheet" href="style.css">
+    <script src="todo.js">
     </script>
 
 </head>
-<body style="color: black;">
-    <h1>Welcome to your ToDo list!</h1>
-    You can add your tasks here:
+<body  id="body">
+    <h1 class="header">Welcome to your ToDo list!</h1>
+    
+
+    <h3>You can add your tasks down here: (Click once to delete a task, click twice to remove it completely)</h2> 
 
     <ul id="tasks">
 
