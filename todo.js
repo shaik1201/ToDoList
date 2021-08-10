@@ -19,12 +19,19 @@ document.addEventListener('DOMContentLoaded', function(){
        document.querySelector('#task').value = '';
        document.querySelector('#submit').disabled = true;
        
-       // bug: the task gets deleted by clicking on the screen and not on the task itself.
        document.addEventListener('click', function(){
-           li.style.textDecoration = 'line-through'
+           li.onclick = () =>{
+            li.style.textDecoration = 'line-through'
+
+           }
+           
        })
        document.addEventListener('dblclick', function(){
-        document.querySelector('#tasks').removeChild(li);
+           li.ondblclick = () =>{
+            document.querySelector('#tasks').removeChild(li);
+               
+           }
+        
     })
        return false;
         }
